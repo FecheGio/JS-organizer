@@ -2,6 +2,15 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
+.controller('AddAmount', function($scope){
+  
+  $scope.amount = 0;
+
+  $scope.add = function(cantidad) { $scope.contador += cantidad; };
+  $scope.deduct = function(cantidad) { $scope.contador -= cantidad; };
+
+})
+
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
